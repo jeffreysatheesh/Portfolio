@@ -262,18 +262,26 @@ if (heroStats) heroObserver.observe(heroStats);
 // ===== CONTACT FORM =====
 const contactForm = document.getElementById('contactForm');
 const submitBtn = document.getElementById('formSubmitBtn');
-const hiddenIframe = document.getElementById('hidden_iframe');
 let isSubmitting = false;
 
-contactForm.addEventListener('submit', () => {
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (isSubmitting) return;
+    
     isSubmitting = true;
+    
     // Animate button
     submitBtn.innerHTML = '<span>Sending...</span><i class="fas fa-spinner fa-spin"></i>';
     submitBtn.style.pointerEvents = 'none';
-});
 
-hiddenIframe.addEventListener('load', () => {
-    if (isSubmitting) {
+    const formData = new FormData(contactForm);
+
+    fetch(contactForm.action, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+    })
+    .then(() => {
         submitBtn.innerHTML = '<span>Message Sent!</span><i class="fas fa-check"></i>';
         submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
         submitBtn.style.boxShadow = '0 8px 25px rgba(16, 185, 129, 0.4)';
@@ -287,7 +295,21 @@ hiddenIframe.addEventListener('load', () => {
             submitBtn.style.boxShadow = '';
             submitBtn.style.pointerEvents = '';
         }, 3000);
-    }
+    })
+    .catch((error) => {
+        console.error('Error submitting form:', error);
+        submitBtn.innerHTML = '<span>Error!</span><i class="fas fa-exclamation-triangle"></i>';
+        submitBtn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+        submitBtn.style.boxShadow = '0 8px 25px rgba(239, 68, 68, 0.4)';
+        
+        setTimeout(() => {
+            submitBtn.innerHTML = '<span>Send Message</span><i class="fas fa-paper-plane"></i>';
+            submitBtn.style.background = '';
+            submitBtn.style.boxShadow = '';
+            submitBtn.style.pointerEvents = '';
+            isSubmitting = false;
+        }, 3000);
+    });
 });
 
 // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
