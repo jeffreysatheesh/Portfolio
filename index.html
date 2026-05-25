@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeffrey Satheesh | Portfolio</title>
+    <meta name="description" content="Jeffrey Satheesh — BTech Computer Science Engineering Graduate. Full-stack developer, UI/UX designer, and problem solver.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                Jeffrey Satheesh
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge animate-on-scroll">
+                    <span class="badge-dot"></span>
+                    Available for opportunities
+                </div>
+                <h1 class="hero-title animate-on-scroll">
+                    <span class="hero-greeting">Hello, I'm</span>
+                    <span class="hero-name">Jeffrey<br>Satheesh</span>
+                </h1>
+                <p class="hero-subtitle animate-on-scroll">
+                    <span class="typewriter" id="typewriter"></span><span class="typewriter-cursor">|</span>
+                </p>
+                <p class="hero-description animate-on-scroll">
+                    BTech Computer Science Engineering Graduate passionate about building digital experiences that make a difference.
+                </p>
+                <div class="hero-cta animate-on-scroll">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+                <div class="hero-stats animate-on-scroll">
+                    <div class="stat">
+                        <span class="stat-number" data-count="3">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="7">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="2">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Years Learning</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-wrapper animate-on-scroll">
+                <div class="hero-image-glow-bg"></div>
+                <div class="hero-image">
+                    <img src="c:\Users\jeffr\Pictures\Screenshots\Screenshot 2026-05-23 230209.png" alt="Jeffrey Satheesh portrait">
+                </div>
+                <div class="hero-image-dots"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scrollIndicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text animate-on-scroll">
+                    <div class="about-card glass-card">
+                        <div class="about-icon">
+                            <i class="fas fa-user-astronaut"></i>
+                        </div>
+                        <h3>Who I Am</h3>
+                        <p>Motivated Computer Science Engineer with hands-on experience in full-stack web development, UI/UX Designing and building responsive web applications.</p>
+                        <blockquote class="about-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <span>"Learn to code, because it teaches you how to think."</span>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="about-skills animate-on-scroll">
+                    <div class="skills-card glass-card">
+                        <h3><i class="fas fa-code"></i> Skills & Technologies</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="Java">
+                                <div class="skill-icon"><i class="fab fa-java"></i></div>
+                                <span>Java</span>
+                            </div>
+                            <div class="skill-item" data-skill="JavaScript">
+                                <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-item" data-skill="C">
+                                <div class="skill-icon"><i class="fas fa-copyright"></i></div>
+                                <span>C</span>
+                            </div>
+                            <div class="skill-item" data-skill="React">
+                                <div class="skill-icon"><i class="fab fa-react"></i></div>
+                                <span>React.js</span>
+                            </div>
+                            <div class="skill-item" data-skill="HTML">
+                                <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="skill-item" data-skill="CSS">
+                                <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                                <span>CSS</span>
+                            </div>
+                            <div class="skill-item" data-skill="MongoDB">
+                                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                                <span>MongoDB</span>
+                            </div>
+                            <div class="skill-item" data-skill="GitHub">
+                                <div class="skill-icon"><i class="fab fa-github"></i></div>
+                                <span>GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <p class="section-subtitle">Some things I've built</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1: Cystocare -->
+                <div class="project-card glass-card animate-on-scroll" id="project-cystocare">
+                    <div class="project-header">
+                        <div class="project-icon-wrapper">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Cystocare</h3>
+                    <p class="project-description">PCOD/PCOS Detection and Personalized Management System — helping women with early diagnosis and tailored healthcare guidance.</p>
+                    <div class="project-tags">
+                        <span class="tag">Healthcare</span>
+                        <span class="tag">AI/ML</span>
+                        <span class="tag">Full-Stack</span>
+                    </div>
+                    <div class="project-number">01</div>
+                </div>
+
+                <!-- Project 2: Smart Farming -->
+                <div class="project-card glass-card animate-on-scroll" id="project-smartfarm">
+                    <div class="project-header">
+                        <div class="project-icon-wrapper">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Smart Farming</h3>
+                    <p class="project-description">An IoT-based Smart Farming and Automation System that monitors and automates agricultural processes for optimal yield.</p>
+                    <div class="project-tags">
+                        <span class="tag">IoT</span>
+                        <span class="tag">Automation</span>
+                        <span class="tag">Agriculture</span>
+                    </div>
+                    <div class="project-number">02</div>
+                </div>
+
+                <!-- Project 3: Amazon Clone -->
+                <div class="project-card glass-card animate-on-scroll" id="project-amazon">
+                    <div class="project-header">
+                        <div class="project-icon-wrapper">
+                            <i class="fab fa-amazon"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Amazon Clone</h3>
+                    <p class="project-description">A pixel-perfect Amazon e-commerce clone built from scratch using HTML, CSS, and JavaScript with responsive design.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="project-number">03</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="section-subtitle">Let's work together</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info animate-on-scroll">
+                    <div class="contact-text glass-card">
+                        <h3>Let's Connect</h3>
+                        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!</p>
+                        <div class="contact-links">
+                            <a href="mailto:jeffreysatheesh@gmail.com" class="contact-item" id="contact-email">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="contact-detail">
+                                    <span class="contact-label">Email</span>
+                                    <span class="contact-value">jeffreysatheesh@gmail.com</span>
+                                </div>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="contact-item" id="contact-linkedin">
+                                <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                                <div class="contact-detail">
+                                    <span class="contact-label">LinkedIn</span>
+                                    <span class="contact-value">Jeffrey Satheesh</span>
+                                </div>
+                            </a>
+                            <a href="https://github.com/jeffreysatheesh" target="_blank" class="contact-item" id="contact-github">
+                                <div class="contact-icon"><i class="fab fa-github"></i></div>
+                                <div class="contact-detail">
+                                    <span class="contact-label">GitHub</span>
+                                    <span class="contact-value">Jeffrey Satheesh</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper animate-on-scroll">
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfbjrbUgpOl2P_plfUFCYYSudVrtXFjuULYB85UL8J6a5YUUQ/formResponse" method="POST" target="hidden_iframe" class="contact-form glass-card" id="contactForm">
+                        <h3>Send a Message</h3>
+                        <div class="form-group">
+                            <input type="text" id="formName" name="entry.2005620554" placeholder=" " required>
+                            <label for="formName">Your Name</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="formEmail" name="entry.1045781291" placeholder=" " required>
+                            <label for="formEmail">Your Email</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="formMessage" name="entry.1065046570" rows="4" placeholder=" " required></textarea>
+                            <label for="formMessage">Your Message</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit" id="formSubmitBtn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <a href="#hero" class="footer-logo">
+                    Jeffrey Satheesh
+                </a>
+                <p class="footer-text">Designed & Built</p>
+                <div class="footer-socials">
+                    <a href="mailto:jeffreysatheesh@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/jeffreysatheesh" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jeffrey Satheesh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
